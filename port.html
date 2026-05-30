@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ajay Vigneshwaran | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0a0f1c;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Background */
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top left, rgba(37,99,235,.15), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(124,58,237,.15), transparent 35%);
+    z-index:-1;
+}
+
+/* Navbar */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:18px 8%;
+    background:rgba(10,15,28,.95);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+.logo{
+    font-size:1.5rem;
+    font-weight:700;
+    color:#60a5fa;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#60a5fa;
+}
+
+/* Hero */
+header{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 20px 40px;
+}
+
+.hero{
+    max-width:900px;
+}
+
+.profile{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #60a5fa;
+    box-shadow:0 0 30px rgba(96,165,250,.4);
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-top:20px;
+}
+
+.hero h1 span{
+    color:#60a5fa;
+}
+
+.hero h3{
+    margin:15px 0;
+    color:#cbd5e1;
+    min-height:35px;
+}
+
+.hero p{
+    color:#cbd5e1;
+    line-height:1.8;
+    max-width:700px;
+    margin:auto;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 35px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(37,99,235,.3);
+}
+
+/* Sections */
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+.section-title{
+    text-align:center;
+    color:#60a5fa;
+    margin-bottom:40px;
+    font-size:2.5rem;
+}
+
+.card{
+    background:#111827;
+    border:1px solid #1f2937;
+    padding:30px;
+    border-radius:20px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+/* Stats */
+.stats{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.stat{
+    background:#111827;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    border:1px solid #1f2937;
+}
+
+.stat h2{
+    font-size:2.8rem;
+    color:#60a5fa;
+}
+
+/* Skills */
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+}
+
+.skill{
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    text-align:center;
+    padding:15px;
+    border-radius:12px;
+    font-weight:600;
+}
+
+/* Projects */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.project{
+    background:#111827;
+    border:1px solid #1f2937;
+    padding:25px;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.project:hover{
+    transform:translateY(-8px);
+    border-color:#60a5fa;
+}
+
+.project h3{
+    color:#60a5fa;
+    margin-bottom:10px;
+}
+
+/* Contact */
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:15px 0;
+}
+
+.contact a{
+    color:#60a5fa;
+    text-decoration:none;
+}
+
+.contact a:hover{
+    color:white;
+}
+
+/* Footer */
+footer{
+    background:#050814;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+
+
+nav ul{
+    gap:12px;
+}
+
+nav ul li a{
+    font-size:.9rem;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">AJAY</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#achievements">Achievements</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<header>
+
+<div class="hero">
+
+
+
+<h1>Hi, I'm <span>Ajay Vigneshwaran</span></h1>
+
+<h3 id="typing"></h3>
+
+<p>
+Passionate Engineering Student interested in Full Stack Development,
+Web Technologies, Problem Solving, Hackathons and Software Development.
+Always eager to learn and build impactful projects.
+</p>
+
+<a href="#contact" class="btn">Contact Me</a>
+
+</div>
+
+</header>
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="card">
+<p>
+I am a first-year engineering student with strong interest in software
+development, web development and emerging technologies. I enjoy creating
+projects, participating in hackathons and continuously improving my
+technical skills.
+</p>
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<h2>10+</h2>
+<p>Projects</p>
+</div>
+
+<div class="stat">
+<h2>10+</h2>
+<p>Technologies</p>
+</div>
+
+<div class="stat">
+<h2>2+</h2>
+<p>Hackathons</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skills">
+<div class="skill">C</div>
+<div class="skill">C++</div>
+<div class="skill">Java</div>
+<div class="skill">Python</div>
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">React JS</div>
+<div class="skill">SQL</div>
+<div class="skill">Git & GitHub</div>
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>Music Streaming Website</h3>
+<p>
+Developed a Spotify-style music player using HTML, CSS and JavaScript
+with playlist and playback controls.
+</p>
+</div>
+
+<div class="project">
+<h3>Portfolio Website</h3>
+<p>
+Built a responsive portfolio website showcasing skills, achievements
+and projects.
+</p>
+</div>
+
+<div class="project">
+<h3>Jal Shakti Hackathon Solution</h3>
+<p>
+Created an innovative technology-based water management solution and
+qualified for the shortlist round.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="achievements"></section>
+
+<h2 class="section-title">Achievements</h2>
+
+<div class="card">
+🏆 Selected for Shortlist Round in Jal Shakti Hackathon 2025 (National Level)
+<br><br>
+🏆 Participated in Technical Events and Hackathons
+<br><br>
+   Certificate Automation in Manufacturing-NPTEL
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="card contact">
+
+<p><strong>Email:</strong> ajayvig2007@gmail.com</p>
+
+<p><strong>Phone:</strong> +91 xxxxxxxxxx</p>
+
+<p>
+<strong>GitHub:</strong>
+<a href="https://github.com/ajayvig2007-netizan" target="_blank">
+github.com/ajayvig2007-netizan
+</a>
+</p>
+
+<p>
+<strong>LinkedIn:</strong>
+<a href="https://www.linkedin.com/in/s-ajay-vigneshwaran-13335737b/" target="_blank">
+LinkedIn Profile
+</a>
+</p>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 S. Ajay Vigneshwaran | Portfolio Website
+</footer>
+
+<script>
+const texts = [
+"Web Developer",
+"React Developer",
+"Programmer",
+"Hackathon Enthusiast",
+"Engineering Student"
+];
+
+let count = 0;
+let index = 0;
+
+function typeEffect(){
+
+let current = texts[count];
+
+document.getElementById("typing").textContent =
+current.slice(0,index++);
+
+if(index > current.length){
+
+count = (count + 1) % texts.length;
+index = 0;
+
+setTimeout(typeEffect,1500);
+
+}else{
+
+setTimeout(typeEffect,120);
+}
+}
+
+typeEffect();
+</script>
+
+</body>
+</html>
