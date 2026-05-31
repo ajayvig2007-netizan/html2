@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎉 Happy Birthday Ashwini 🎉</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:linear-gradient(-45deg,#ff4e50,#fc913a,#f9d423,#e55d87);
+    background-size:400% 400%;
+    animation:bg 10s ease infinite;
+}
+
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    text-align:center;
+    color:white;
+    z-index:10;
+    padding:30px;
+}
+
+h1{
+    font-size:4rem;
+    text-shadow:0 0 20px rgba(255,255,255,.8);
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #fff;
+    }
+    to{
+        text-shadow:0 0 30px #fff,0 0 50px #ffeb3b;
+    }
+}
+
+.subtitle{
+    margin-top:20px;
+    font-size:1.3rem;
+    max-width:700px;
+    line-height:1.8;
+}
+
+.cake{
+    font-size:110px;
+    margin:20px 0;
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-20px);
+    }
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 35px;
+    background:white;
+    color:#e91e63;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.4s;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 20px white;
+}
+#birthdayPhoto{
+    display:none;
+    width:450px;
+    max-width:90vw;
+    height:auto;
+    object-fit:contain;
+    border-radius:20px;
+    border:5px solid white;
+    box-shadow:0 0 30px white;
+    animation:zoomIn 1s ease forwards;
+    margin:20px auto;
+}
+
+@keyframes zoomIn{
+    from{
+        transform:scale(0);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.balloon{
+    position:absolute;
+    bottom:-150px;
+    width:80px;
+    height:100px;
+    border-radius:50%;
+    animation:float 10s linear infinite;
+}
+
+.balloon::before{
+    content:"";
+    position:absolute;
+    width:2px;
+    height:80px;
+    background:white;
+    left:50%;
+    top:100px;
+}
+
+.balloon:nth-child(1){
+    left:10%;
+    background:#ff1744;
+    animation-duration:8s;
+}
+
+.balloon:nth-child(2){
+    left:25%;
+    background:#ffea00;
+    animation-duration:10s;
+}
+
+.balloon:nth-child(3){
+    left:45%;
+    background:#00e676;
+    animation-duration:12s;
+}
+
+.balloon:nth-child(4){
+    left:65%;
+    background:#2979ff;
+    animation-duration:9s;
+}
+
+.balloon:nth-child(5){
+    left:85%;
+    background:#d500f9;
+    animation-duration:11s;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+}
+
+.confetti{
+    position:absolute;
+    width:10px;
+    height:10px;
+    animation:fall 5s linear infinite;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-100vh) rotate(0deg);
+    }
+    to{
+        transform:translateY(100vh) rotate(720deg);
+    }
+}
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2.3rem;
+    }
+
+    .subtitle{
+        font-size:1rem;
+    }
+
+    .cake{
+        font-size:80px;
+    }
+
+ #birthdayPhoto{
+    display:none;
+    max-width:60vw;
+    max-height:80vh;
+    width:auto;
+    height:auto;
+    border-radius:25px;
+    border:5px solid white;
+    box-shadow:0 0 40px rgba(255,255,255,.8);
+}
+}
+</style>
+</head>
+<body>
+
+<!-- Background Music -->
+<audio id="birthdaySong" autoplay loop>
+    <source src="nastelbom-happy-birthday-495860 (1).mp3" type="audio/mpeg">
+</audio>
+
+<!-- Balloons -->
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+
+<div class="container">
+
+    <div id="cake" class="cake">🎂</div>
+
+    <img src="photo.jpeg" id="birthdayPhoto" alt="Ashwini">     
+    <h1>🎉 Happy Birthday Ashwini! 🎉</h1>
+
+    <p class="subtitle">
+        Wishing you a day filled with happiness, laughter,
+        success, and unforgettable memories.
+        May all your dreams come true and may this year
+        bring endless joy and achievements into your life! ✨
+    </p>
+
+    <a href="#" class="btn" onclick="showPhoto();return false;">
+        🎁 Best Wishes 🎁
+    </a>
+
+</div>
+
+<script>
+
+// Replace cake with photo
+function showPhoto(){
+    document.getElementById("cake").style.display = "none";
+
+    const photo = document.getElementById("birthdayPhoto");
+    photo.style.display = "block";
+
+    // Optional: hide text to give photo more space
+    document.querySelector(".subtitle").style.display = "none";
+}
+// Confetti
+for(let i=0;i<120;i++){
+    let c=document.createElement("div");
+    c.classList.add("confetti");
+
+    c.style.left=Math.random()*100+"vw";
+    c.style.top="-20px";
+    c.style.opacity=Math.random();
+
+    c.style.background=
+    `hsl(${Math.random()*360},100%,50%)`;
+
+    c.style.animationDuration=
+    (Math.random()*3+2)+"s";
+
+    document.body.appendChild(c);
+}
+
+// Try autoplay
+window.onload=function(){
+
+    const song=document.getElementById("birthdaySong");
+
+    song.play().catch(()=>{
+        document.body.addEventListener(
+            "click",
+            ()=>song.play(),
+            {once:true}
+        );
+    });
+
+};
+</script>
+
+</body>
+</html>
