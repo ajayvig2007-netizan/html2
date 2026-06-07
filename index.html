@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NextGen AI Solutions</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:white;
+overflow-x:hidden;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(15,23,42,0.95);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#38bdf8;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+margin-left:25px;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:0 10%;
+background:
+linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+url("https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+}
+
+.hero-content h1{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.hero-content span{
+color:#38bdf8;
+}
+
+.hero-content p{
+font-size:1.2rem;
+max-width:700px;
+margin:auto;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#38bdf8;
+color:white;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(56,189,248,.5);
+}
+
+section{
+padding:100px 10%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:60px;
+color:#38bdf8;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:20px;
+}
+
+.about-text h3{
+font-size:30px;
+margin-bottom:15px;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1e293b;
+padding:30px;
+border-radius:20px;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(56,189,248,.3);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#38bdf8;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+text-align:center;
+}
+
+.stat{
+background:#1e293b;
+padding:30px;
+border-radius:20px;
+}
+
+.stat h2{
+font-size:50px;
+color:#38bdf8;
+}
+
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.testimonial{
+background:#1e293b;
+padding:30px;
+border-radius:20px;
+}
+
+.contact{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border:none;
+border-radius:10px;
+background:#1e293b;
+color:white;
+}
+
+.contact-form button{
+width:100%;
+padding:15px;
+background:#38bdf8;
+border:none;
+border-radius:10px;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
+
+footer{
+text-align:center;
+padding:25px;
+background:#020617;
+}
+
+@media(max-width:900px){
+
+.hero-content h1{
+font-size:2.5rem;
+}
+
+.about,
+.contact{
+grid-template-columns:1fr;
+}
+
+nav{
+display:none;
+}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">NextGen AI</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#stats">Achievements</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>Building The Future With <span>Artificial Intelligence</span></h1>
+<p>
+We help startups, businesses and organizations leverage AI technology,
+automation, analytics and modern web solutions.
+</p>
+<a href="#services" class="btn">Explore Services</a>
+</div>
+</section>
+
+<section id="about">
+<h2 class="title">About Us</h2>
+
+<div class="about">
+<img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80">
+
+<div class="about-text">
+<h3>Transforming Ideas Into Digital Success</h3>
+
+<p>
+NextGen AI Solutions is a technology company focused on helping businesses
+accelerate growth through AI-powered innovation, intelligent automation,
+modern websites, cloud technologies and data-driven insights.
+</p>
+
+<br>
+
+<p>
+Our mission is to bridge the gap between technology and business success
+through scalable and innovative solutions.
+</p>
+
+<br>
+
+<a href="#contact" class="btn">Get Started</a>
+</div>
+</div>
+</section>
+
+<section id="services">
+<h2 class="title">Our Services</h2>
+
+<div class="services-grid">
+
+<div class="card">
+<h3>AI Development</h3>
+<p>Custom AI solutions, chatbots and machine learning systems.</p>
+</div>
+
+<div class="card">
+<h3>Web Development</h3>
+<p>Responsive websites and modern web applications.</p>
+</div>
+
+<div class="card">
+<h3>Cloud Solutions</h3>
+<p>Secure cloud deployment and infrastructure management.</p>
+</div>
+
+<div class="card">
+<h3>Business Automation</h3>
+<p>Automate workflows and improve productivity.</p>
+</div>
+
+<div class="card">
+<h3>Data Analytics</h3>
+<p>Convert business data into actionable insights.</p>
+</div>
+
+<div class="card">
+<h3>Digital Marketing</h3>
+<p>Grow your audience with modern digital strategies.</p>
+</div>
+
+</div>
+</section>
+
+<section id="stats">
+<h2 class="title">Our Impact</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h2 class="counter" data-target="150">0</h2>
+<p>Projects Completed</p>
+</div>
+
+<div class="stat">
+<h2 class="counter" data-target="95">0</h2>
+<p>Client Satisfaction %</p>
+</div>
+
+<div class="stat">
+<h2 class="counter" data-target="50">0</h2>
+<p>AI Solutions Delivered</p>
+</div>
+
+<div class="stat">
+<h2 class="counter" data-target="20">0</h2>
+<p>Global Partners</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2 class="title">Client Testimonials</h2>
+
+<div class="testimonials">
+
+<div class="testimonial">
+<p>
+"The AI automation solution increased our productivity by 40%."
+</p>
+<br>
+<strong>— Sarah Johnson</strong>
+</div>
+
+<div class="testimonial">
+<p>
+"Professional team and outstanding website development services."
+</p>
+<br>
+<strong>— Michael Lee</strong>
+</div>
+
+<div class="testimonial">
+<p>
+"Their cloud and AI expertise transformed our business operations."
+</p>
+<br>
+<strong>— David Smith</strong>
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<h2 class="title">Contact Us</h2>
+
+<div class="contact">
+
+<div>
+<h3 style="font-size:30px;color:#38bdf8;">Let's Build Something Amazing</h3>
+<br>
+<p>Email: info@nextgenai.com</p>
+<br>
+<p>Phone: +91 98765 43210</p>
+<br>
+<p>Location: Chennai, India</p>
+</div>
+
+<div class="contact-form">
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea rows="6" placeholder="Your Message"></textarea>
+<button>Send Message</button>
+</div>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 NextGen AI Solutions | All Rights Reserved</p>
+</footer>
+
+<script>
+
+const counters=document.querySelectorAll('.counter');
+
+counters.forEach(counter=>{
+
+const updateCounter=()=>{
+
+const target=+counter.getAttribute('data-target');
+const count=+counter.innerText;
+
+const increment=target/100;
+
+if(count<target){
+counter.innerText=Math.ceil(count+increment);
+setTimeout(updateCounter,20);
+}
+else{
+counter.innerText=target;
+}
+
+}
+
+updateCounter();
+
+});
+
+</script>
+
+</body>
+</html>
